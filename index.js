@@ -13,20 +13,5 @@ var room_users = [];
 var display_user;
 
 io.on('connection', function (socket) {
-    socket.on('Join', function (user) {
-        room_users.push(socket.id);
-        room_users[socket.id] = user;
-
-        var data = "{ user : " + socket.id + " }";
-
-        io.to(socket.id).emit("ReceiveUserID", data)
-    });
-
-    socket.on('SendInput', function(data) {
-        io.to(display_user).emit('ReceiveInput', data);
-    });
-
-    socket.on('Display_User', function(data) {
-        display_user = socket.id;
-    });
+    
 });
