@@ -1,16 +1,19 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "server game",
+  "description": "server-demo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Non3null/server-demo.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.2",
-    "http": "0.0.0",
-    "io": "^1.0.0"
-  }
+  "bugs": {
+    "url": "https://github.com/Non3null/server-demo/issues"
+  },
+  "homepage": "https://github.com/Non3null/server-demo#readme"
 }
