@@ -13,12 +13,12 @@ var room_users = [];
 var display_user;
 
 io.on('connection', function (socket) {
-    socket.on('join', function(user) {
-        room_users[user] = ""
+    socket.on('Join', function (user) {
+        room_users.push(user)
     });
 
-    socket.on('sendInput', function(data) {
-        io.to(display_user).emit('receiveInput', data);
+    socket.on('SendInput', function(data) {
+        io.to(display_user).emit('ReceiveInput', data);
     });
 
     socket.on('Display_User', function(data) {
